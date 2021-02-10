@@ -1,0 +1,71 @@
+<!doctype html>
+<title>Example</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgb(155 155 155) 0%, rgb(238 238 238) 75%);
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #main {
+        display: flex;
+        flex: 1;
+    }
+
+    #main>article {
+        flex: 1;
+    }
+
+    #main>nav,
+    #main>aside {
+        flex: 0 0 20vw;
+        /*background: beige;*/
+    }
+
+    #main>nav {
+        order: -1;
+    }
+
+    header,
+    footer {
+        /*background: yellowgreen;*/
+        height: 20vh;
+    }
+
+    header,
+    footer,
+    article,
+    nav {
+        padding: 1em;
+    }
+
+    container {
+        margin: 2em;
+    }
+</style>
+
+<body>
+    <container>
+        <header>
+            <img src="logo.png" />
+            <nav>
+                <li>home</li>
+                <li>products</li>
+                <li>compliance</li>
+                <li>contact us</li>
+            </nav>
+        </header>
+        <div id="main">
+            <article>Article</article>
+        </div>
+        <footer>Footer</footer>
+    </container>
+    <!--<img src='ref.png'>!-->
+</body>
