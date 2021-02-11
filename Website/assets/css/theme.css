@@ -67,22 +67,26 @@ strong {
 }
 
 .main-content {
-    padding-top: 160px;
+    padding-top: 100px;
 }
 
 .navbar-toggle {
-    border-color: #fff;
+    /* border-color: #fff; */
     margin-top: 71px;
 }
 
     .navbar-toggle .icon-bar {
-        background: #fff;
+        /* background: #fff; */
     }
 
 .navbar-brand {
-    background: #000;
+    /* background: #000; */
     height: auto;
-    padding: 41px 30px 42px 30px;
+    /* padding: 41px 30px 42px 30px; */
+}
+
+.navbar-toggle img {
+    max-width: 48px;
 }
 
     .navbar-brand img {
@@ -95,10 +99,10 @@ strong {
     font-size: 21px;
     color: #fff;
     border: 0;
-    background: url(../img/main-menu-bg-big.png) no-repeat right center #00aeef;
+    /* background: url(../img/main-menu-bg-big.png) no-repeat right center #00aeef;
     background: url(../img/main-menu-bg-big.png) no-repeat right center,-moz-linear-gradient(left,#000 0,#000 50%,#00aeef 50%,#00aeef 100%);
     background: url(../img/main-menu-bg-big.png) no-repeat right center,-webkit-linear-gradient(left,#000 0,#000 50%,#00aeef 50%,#00aeef 100%);
-    background: url(../img/main-menu-bg-big.png) no-repeat right center,linear-gradient(to right,#000 0,#000 50%,#00aeef 50%,#00aeef 100%);
+    background: url(../img/main-menu-bg-big.png) no-repeat right center,linear-gradient(to right,#000 0,#000 50%,#00aeef 50%,#00aeef 100%); */
 }
 
 .nav-links {
@@ -106,23 +110,23 @@ strong {
 }
 
     .nav-links li:first-child, .nav-links li:nth-child(2) {
-        background: #00aeef;
+        /* background: #00aeef; */
     }
 
     .nav-links.navbar-nav > li {
-        padding: 71px 15px 0 15px;
+        padding: 71px 30px 0 30px;
     }
 
         .nav-links.navbar-nav > li > a {
-            color: #fff;
+            color:#5f5f5f;
             text-shadow: none;
             border-bottom: 5px transparent solid;
-            padding: 32px 0;
+            padding: 0 0 8px 0;
         }
 
         .nav-links.navbar-nav > li.active > a, .nav-links.navbar-nav > li a:hover {
             color: #000;
-            border-bottom: 5px #fff solid;
+            border-bottom: 5px #5f5f5f solid;
             background: inherit;
         }
 
@@ -177,7 +181,7 @@ strong {
 }
 
 .text-stripe {
-    background: #00aeef;
+    /* background: #00aeef; */
     color: #fff;
 }
 
@@ -666,7 +670,7 @@ th.comp-c3 {
 }
 
 .footer {
-    background: #000;
+    /* background: #000; */
     color: #696969;
     font-size: 18px;
     padding-top: 30px;
@@ -698,7 +702,8 @@ th.comp-c3 {
 
 @media(max-width:991px) {
     .navbar-brand {
-        padding: 41px 15px 42px 15px;
+        /* padding: 41px 15px 42px 15px; */
+        padding: 3rem 15px 42px 15px;
     }
 
     .nav-links li:first-child, .nav-links li:nth-child(2) {
@@ -729,11 +734,12 @@ th.comp-c3 {
 
 @media(max-width:767px) {
     .nav-main {
-        background: #00aeef;
+        /* background: #00aeef; */
+        /* background: #000; */
     }
 
     .navbar-header {
-        background: #000;
+        /* background: #000; */
     }
 
     .nav-links.navbar-nav > li.active > a, .nav-links.navbar-nav > li a:hover {
@@ -796,10 +802,174 @@ th.comp-c3 {
 
 @media(max-width:450px) {
     .navbar-brand img {
-        height: 55px;
+        /* height: 55px; */
+        height: 45px;
     }
 
     .navbar-toggle {
-        margin-top: 57px;
+        /* margin-top: 57px; */
+        margin-top: 2rem;
+        margin-right: 10px;
+    }
+}
+
+
+/* atrix gamer overides */
+.nav.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 450px) {
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: none;
+    }
+}
+
+body {
+    /* background: rgb(77,76,75);
+    background: linear-gradient(180deg, rgba(77,76,75,1) 0%, rgba(131,131,131,1) 15%, rgba(179,179,179,1) 75%); */
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgb(155 155 155) 0%, rgb(238 238 238) 75%);
+}
+
+.mainWrapper {
+    margin: 2rem 4vw;
+    /* background-image: url('../../logo/atrixLogo.png');
+    background-repeat: no-repeat;
+    background-size: 100px; */
+}
+
+
+.bodyContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bodyContent>div {
+    flex: 1;
+    margin-bottom: 3rem;
+}
+
+.tagline {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.taglineImage img {
+    max-width: 100%;
+}
+
+.taglineButtons {    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.taglineButtons button {
+    background: #5f5f5f;
+    color: white;
+    border-radius: 35px;
+    border: transparent;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    padding: 6px 22px;
+    font-weight: 900;
+}
+
+.taglineButtons button:hover {
+    background: transparent;
+    color: #5f5f5f;
+    border: 2px #5f5f5f solid;
+}
+
+.taglineButtons button:nth-child(2) {
+    background: transparent;
+    color: #5f5f5f;
+    border: 2px #5f5f5f solid;
+}
+
+.hamburger {
+    color: #8f8f8f;
+    font-size: 5rem;
+}
+
+.navbar-toggle {
+    padding-right: 4vw;
+    padding-top: 3rem;
+    margin: 0;
+}
+
+.navbar-brand {
+    padding-left:4vw;
+}
+
+@media (max-width: 767px) {
+    .nav-main {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        }
+
+        /*blur isn't yet supported in firefox*/
+        @-moz-document url-prefix() {
+
+            .nav-main {
+                background:#d1d1d1d6;
+            }
+        
+        }
+}
+
+@media(min-width:450px) {
+    .bodyContent {
+        display: block;
+    }
+
+    .tagline {
+        font-size: 5vw;
+        margin-top: 6vh;
+        line-height: 1;
+        text-align: left;
+        float: left;
+        width: 40%;
+    }
+    
+    
+    .taglineImage {
+        float: right;
+        width: 60%;
+        order: 1;
+    }
+    
+    .taglineButtons {    
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        font-size: 2.2vw;
+        /* float: left; */
+        width: 40%;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width:991px) {
+    .tagline {
+        margin-top: 14vh;
     }
 }
