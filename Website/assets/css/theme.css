@@ -702,8 +702,7 @@ th.comp-c3 {
 
 @media(max-width:991px) {
     .navbar-brand {
-        /* padding: 41px 15px 42px 15px; */
-        padding: 3rem 15px 42px 15px;
+        padding: 41px 15px 42px 15px;
     }
 
     .nav-links li:first-child, .nav-links li:nth-child(2) {
@@ -720,7 +719,7 @@ th.comp-c3 {
 
         .nav-links.navbar-nav > li.active > a, .nav-links.navbar-nav > li a:hover {
             border-color: transparent;
-            color: #00aeef;
+            color: #000;
         }
 
     .prod-list-single-title h3 {
@@ -814,42 +813,26 @@ th.comp-c3 {
 }
 
 
-/* atrix gamer overides */
+/* ----------------------------- atrix gamer overides --------------------------------- */
 .nav.navbar-nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-@media (max-width: 450px) {
-    .navbar-nav {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-}
-
-@media (min-width: 768px) {
-    .navbar-nav {
-        float: none;
-    }
-}
-
 body {
-    /* background: rgb(77,76,75);
-    background: linear-gradient(180deg, rgba(77,76,75,1) 0%, rgba(131,131,131,1) 15%, rgba(179,179,179,1) 75%); */
     background: rgb(0, 0, 0);
     background: linear-gradient(180deg, rgb(155 155 155) 0%, rgb(238 238 238) 75%);
 }
 
 .mainWrapper {
     margin: 2rem 4vw;
-    /* background-image: url('../../logo/atrixLogo.png');
-    background-repeat: no-repeat;
-    background-size: 100px; */
 }
 
+html {
+    /* added this to prevent that strange gradient blocky effect on certain devices*/
+    min-height: 100%;
+}
 
 .bodyContent {
     display: flex;
@@ -920,20 +903,13 @@ body {
     padding-left:4vw;
 }
 
-@media (max-width: 767px) {
-    .nav-main {
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        }
-
-        /*blur isn't yet supported in firefox*/
-        @-moz-document url-prefix() {
-
-            .nav-main {
-                background:#d1d1d1d6;
-            }
-        
-        }
+.footer {
+    color: #5f5f5f;
+    font-size: 1rem;
+    padding-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    float: left;
 }
 
 @media(min-width:450px) {
@@ -947,13 +923,13 @@ body {
         line-height: 1;
         text-align: left;
         float: left;
-        width: 40%;
+        width: 50%;
     }
     
     
     .taglineImage {
         float: right;
-        width: 60%;
+        width: 50%;
         order: 1;
     }
     
@@ -962,8 +938,7 @@ body {
         display: flex;
         flex-direction: row;
         font-size: 2.2vw;
-        /* float: left; */
-        width: 40%;
+        width: 50%;
         justify-content: space-between;
     }
 }
@@ -971,5 +946,57 @@ body {
 @media(min-width:991px) {
     .tagline {
         margin-top: 14vh;
+        width: 40%;
     }
+       
+    .taglineImage {
+        width: 60%;
+    }
+
+    .taglineButtons {    
+        width: 40%;
+    }
+
+    .navbar-brand {
+        padding-top: 30px;
+    }
+
+    .nav-links {
+        margin-right: 8vw;
+        padding-left: 0;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: none;
+    }
+}
+
+@media(max-width:991px) {
+    .navbar-brand {
+        padding: 3rem 15px 15px 4vw;
+    }
+
+    .nav-main {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        }
+
+        /*blur isn't yet supported in firefox*/
+        @-moz-document url-prefix() {
+
+            .nav-main {
+                background:#d1d1d1d6;
+            }
+        
+        }
+
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
 }
