@@ -733,12 +733,11 @@ th.comp-c3 {
 
 @media(max-width:767px) {
     .nav-main {
-        /* background: #00aeef; */
-        /* background: #000; */
+        background: #00aeef;
     }
 
     .navbar-header {
-        /* background: #000; */
+        background: #000;
     }
 
     .nav-links.navbar-nav > li.active > a, .nav-links.navbar-nav > li a:hover {
@@ -801,28 +800,37 @@ th.comp-c3 {
 
 @media(max-width:450px) {
     .navbar-brand img {
-        /* height: 55px; */
-        height: 45px;
+        height: 55px;
     }
 
     .navbar-toggle {
-        /* margin-top: 57px; */
-        margin-top: 2rem;
+        margin-top: 57px;
         margin-right: 10px;
     }
 }
 
 
 /* ----------------------------- atrix gamer overides --------------------------------- */
-.nav.navbar-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
+h1, h2, h3, h4, h5 {
+    color: #5f5f5f;
+}
+
+a {
+    color: #5f5f5f;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+h1 span {
+    color: #5f5f5f;
 }
 
 body {
     background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgb(155 155 155) 0%, rgb(238 238 238) 75%);
+    background: linear-gradient(180deg, rgb(155 155 155) 0%, rgb(238 238 238) 600px);
 }
 
 .mainWrapper {
@@ -833,6 +841,64 @@ html {
     /* added this to prevent that strange gradient blocky effect on certain devices*/
     min-height: 100%;
 }
+
+/* -- Navigation -- */
+
+.hamburger {
+    color: #8f8f8f;
+    font-size: 5rem;
+}
+
+.nav.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar-toggle {
+    padding-right: 4vw;
+    padding-top: 3rem;
+    margin: 0;
+}
+
+.navbar-brand {
+    padding-left:4vw;
+}
+
+.navbar-header {
+    background: transparent;
+}
+
+/* blur bg to improve sticky nav readability */
+.nav-main {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: transparent;
+}
+
+/* blur isn't yet supported in firefox*/
+@-moz-document url-prefix() {
+
+        .nav-main {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, .9);
+            background:rgba(209, 209, 209, .9);
+        }
+    
+}
+
+/* - Footer - */
+
+.footer {
+        color: #5f5f5f;
+        font-size: 1rem;
+        padding-bottom: 15px;
+        text-align: center;
+        width: 100%;
+        float: left;
+}
+
+/* - Home Page - */
 
 .bodyContent {
     display: flex;
@@ -865,16 +931,21 @@ html {
     flex-direction: column;
 }
 
-.taglineButtons button {
-    background: #5f5f5f;
+.taglineButtons button a {
+    text-transform: uppercase;
+    font-weight: 900;
     color: white;
-    border-radius: 35px;
+}
+
+.taglineButtons button {
+    padding: 6px 22px;
+    color: white;
+    background: #5f5f5f;
     border: transparent;
     margin-bottom: 2rem;
-    text-transform: uppercase;
-    padding: 6px 22px;
-    font-weight: 900;
+    border-radius: 35px;
 }
+
 
 .taglineButtons button:hover {
     background: transparent;
@@ -882,36 +953,71 @@ html {
     border: 2px #5f5f5f solid;
 }
 
+.taglineButtons button a {
+    color: inherit;
+}
+
 .taglineButtons button:nth-child(2) {
-    background: transparent;
-    color: #5f5f5f;
+    background: transparent;    
     border: 2px #5f5f5f solid;
 }
 
-.hamburger {
-    color: #8f8f8f;
-    font-size: 5rem;
-}
-
-.navbar-toggle {
-    padding-right: 4vw;
-    padding-top: 3rem;
-    margin: 0;
-}
-
-.navbar-brand {
-    padding-left:4vw;
-}
-
-.footer {
+.taglineButtons button:nth-child(2) a {
     color: #5f5f5f;
-    font-size: 1rem;
-    padding-bottom: 15px;
-    text-align: center;
-    width: 100%;
-    float: left;
 }
 
+/* -- Product page -- */
+.prod-list h2 {
+    color: #5f5f5f;
+    border-bottom: solid 1px #5f5f5f;
+}
+
+/* hide these badges until we get badges from atrix */
+.labels-block {
+    display: none;
+}
+
+/* -- Compliance page -- */
+
+.comp-table.table th {
+    color: #5f5f5f;
+}
+
+.comp-table.table th, .comp-table.table td {
+    border-bottom: solid 1px #5f5f5f;
+}
+
+.comp-table td.comp-Name i {
+    background: none;
+}
+
+.btn-blue {
+    background: #5f5f5f;
+    color: #fff;
+    border: solid 1px #5f5f5f;
+}
+
+.btn-blue:hover, .btn-blue:focus {
+    background: #fff;
+    color: #5f5f5f;
+}
+
+/* -- Contact us page -- */
+.float-block {
+    background: #5f5f5f;
+    color: #fff;
+}
+
+.btn-white {
+    color: #5f5f5f;
+}
+
+.btn-white:hover, .btn-white:focus {
+    background: #5f5f5f;
+    color: #fff;
+}
+
+/* -- Responsive css --*/
 @media(min-width:450px) {
     .bodyContent {
         display: block;
@@ -943,6 +1049,12 @@ html {
     }
 }
 
+@media(max-width:450px) {
+    .navbar-brand img {
+        height: 45px;
+    }
+}
+
 @media(min-width:991px) {
     .tagline {
         margin-top: 14vh;
@@ -970,7 +1082,7 @@ html {
 
 @media (min-width: 768px) {
     .navbar-nav {
-        float: none;
+        float: none;        
     }
 }
 
@@ -978,20 +1090,6 @@ html {
     .navbar-brand {
         padding: 3rem 15px 15px 4vw;
     }
-
-    .nav-main {
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        }
-
-        /*blur isn't yet supported in firefox*/
-        @-moz-document url-prefix() {
-
-            .nav-main {
-                background:#d1d1d1d6;
-            }
-        
-        }
 
         .navbar-nav {
             display: flex;
