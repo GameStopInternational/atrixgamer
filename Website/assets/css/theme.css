@@ -566,6 +566,17 @@ th.comp-c3 {
     color: #0077c8;
 }
 
+.plat-bg-chargers-cables {
+    background: #0077c8;
+    color: #fff;
+    border-color: #0077c8;
+}
+
+.btn.plat-bg-chargers-cables:hover {
+    background: #fff;
+    color: #0077c8;
+}
+
 .plat-bg-psvita {
     background: #0073b9;
     color: #fff;
