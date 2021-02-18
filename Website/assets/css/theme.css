@@ -89,9 +89,9 @@ strong {
     max-width: 48px;
 }
 
-    .navbar-brand img {
+    /* .navbar-brand img {
         height: 77px;
-    }
+    } */
 
 .nav-main {
     text-transform: uppercase;
@@ -599,13 +599,13 @@ th.comp-c3 {
     color: #a2aaad;
 }
 
-.plat-bg-ps4 {
+.plat-bg-audio {
     background: #0073b9;
     color: #fff;
     border-color: #0073b9;
 }
 
-.btn.plat-bg-ps4:hover {
+.btn.plat-bg-audio:hover {
     background: #fff;
     color: #0073b9;
 }
