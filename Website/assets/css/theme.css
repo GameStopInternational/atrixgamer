@@ -1019,6 +1019,10 @@ html {
     max-height: 555px;
 }
 
+.main-img-cont + .row {
+    margin-top: 30px;
+}
+
 /* -- Compliance page -- */
 
 .comp-table.table th {
