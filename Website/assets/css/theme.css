@@ -895,18 +895,20 @@ html {
 .nav-main {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background: transparent;
+    background: #adaaaaa6;
 }
 
 /* blur isn't yet supported in firefox*/
 @-moz-document url-prefix() {
 
         .nav-main {
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, .9);
-            background:rgba(209, 209, 209, .9);
+            background:#adaaaaa6;
         }
     
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background: none;
 }
 
 /* - Footer - */
@@ -1011,6 +1013,10 @@ html {
 
 .prod-details h1 {
     margin: 0;
+}
+
+.main-img-cont a img {
+    max-height: 555px;
 }
 
 /* -- Compliance page -- */
