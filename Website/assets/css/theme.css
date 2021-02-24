@@ -1138,6 +1138,11 @@ html {
     .prod-details {
         margin-top: 60px;
     }
+
+    .taglineImage img {
+        max-height: 800px;
+        padding-left: 100px;
+    }
     
 }
 
