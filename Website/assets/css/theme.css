@@ -126,7 +126,7 @@ strong {
 
         .nav-links.navbar-nav > li.active > a, .nav-links.navbar-nav > li a:hover {
             color: #000;
-            border-bottom: 5px #5f5f5f solid;
+            border-bottom: 5px #fff solid;
             background: inherit;
         }
 
@@ -866,8 +866,12 @@ html {
 
 /* -- Navigation -- */
 
+.img-logo {
+    max-height: 70px
+}
+
 .hamburger {
-    color: #8f8f8f;
+    color: #fff;
     font-size: 5rem;
 }
 
@@ -893,18 +897,10 @@ html {
 
 /* blur bg to improve sticky nav readability */
 .nav-main {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: #adaaaaa6;
-}
-
-/* blur isn't yet supported in firefox*/
-@-moz-document url-prefix() {
-
-        .nav-main {
-            background:#adaaaaa6;
-        }
-    
+    background-image: url(../img/Banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
@@ -999,6 +995,7 @@ html {
 .prod-list-single img {
     min-height: 360px;
     max-height: 360px;
+    object-fit: contain;
 }
 
 /* -- Product Details page -- */
