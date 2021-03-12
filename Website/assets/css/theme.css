@@ -1140,6 +1140,11 @@ html {
         max-height: 800px;
         padding-left: 100px;
     }
+
+    /* .nav-main, .main-content {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    } */
     
 }
 
@@ -1147,6 +1152,7 @@ html {
     .navbar-nav {
         float: none;        
     }
+
 }
 
 @media(max-width:991px) {
